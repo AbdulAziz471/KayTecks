@@ -1,0 +1,32 @@
+.bacground_image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../../Images/shopify_markets.svg") no-repeat scroll 0 0;
+    background-size: 100% 100%;
+    width: 21.25%;
+    padding-bottom: 14.4%;
+}
+
+@media(max-width: 600px) {
+    .bacground_image:before {
+        content: none;
+    }
+
+}
+
+.changeColorSvg:hover svg path {
+    stroke: #1a50a3;
+
+}
+
+.changeColorSvg::before {
+    left: 0;
+    position: absolute;
+    content: "";
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    height: 220px;
+    width: 1px;
+    top: 10px;
+}

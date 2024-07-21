@@ -1,0 +1,26 @@
+.drawer {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+}
+
+.drawer .drawer_list {
+    position: fixed !important;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin: 0px;
+    bottom: 0px;
+    background-color: white;
+    width: 250px;
+    z-index: 99;
+}
+
+.NavLinkClass:has(.active) {
+    border-bottom: 2px solid black;
+}

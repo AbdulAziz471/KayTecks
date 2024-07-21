@@ -1,0 +1,75 @@
+.Service .img_icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 17px 6px 0 23px;
+    line-height: 0;
+    z-index: 1;
+}
+
+.Service .img_icon::before {
+    content: "";
+    position: absolute;
+    background: url("../../Images/serv.svg") no-repeat scroll center;
+    width: 92px;
+    height: 69px;
+    background-size: 100% 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    animation: footer_ellipse_1 5s linear infinite;
+}
+
+.KeyFeaturesCard .img_icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 17px 6px 0 23px;
+    line-height: 0;
+    z-index: 1;
+}
+
+.KeyFeaturesCard .img_icon::before {
+    content: "";
+    position: absolute;
+    background: url("../../Images/Ellipse_61.svg") no-repeat scroll center;
+    width: 92px;
+    height: 69px;
+    background-size: 100% 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    animation: footer_ellipse_1 5s linear infinite;
+}
+
+
+@keyframes footer_ellipse_1 {
+    50% {
+        left: 40%;
+    }
+}
+
+.link_text {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: -.02em;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.link_text::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -4px;
+    background: #070707;
+    height: 2px;
+    width: 0px;
+    transition: all .3s ease-in-out;
+}
+
+.link_text:hover::before {
+    width: 100%;
+}

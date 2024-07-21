@@ -1,0 +1,53 @@
+.heading::after {
+    position: absolute;
+    background: #86dbd0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    content: "";
+    width: 57px;
+    height: 8px;
+    left: 0;
+    bottom: 26px;
+    background: rgb(7, 78, 21, .5);
+}
+
+@media (max-width: 1024px) {
+    .heading::after {
+        position: absolute;
+        background: #86dbd0;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -o-border-radius: 10px;
+        -ms-border-radius: 10px;
+        content: "";
+        width: 57px;
+        height: 8px;
+        left: 50%;
+        bottom: 26px;
+        background: rgb(7, 78, 21, .5);
+    }
+}
+
+.appCollapsible::after {
+
+    position: absolute;
+    background: url("../../Images/grey_bg.svg") no-repeat scroll 0 0;
+    left: -69px;
+    top: -81px;
+    content: "";
+    width: 531px;
+    height: 398px;
+    pointer-events: none;
+    animation: footer_ellipse_1 5s linear infinite;
+}
+
+@keyframes footer_ellipse_1 {
+
+    50% {
+        left: 40%;
+    }
+}

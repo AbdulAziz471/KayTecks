@@ -1,0 +1,22 @@
+.ContactPage {
+    padding: 108px 0 118px;
+    margin: 0 150px;
+    background-color: black;
+    position: relative;
+}
+
+.ContactPage::before {
+    content: "";
+    position: absolute;
+    right: -28px;
+    bottom: -60px;
+    background: url(../../Images/arrow-line.svg) no-repeat;
+    width: 360px;
+    height: 250px;
+
+}
+
+
+.slick-slide>div {
+    margin-right: 15px;
+}

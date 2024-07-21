@@ -1,0 +1,19 @@
+.left_scrolling_img {
+    animation: marquee 20s linear infinite;
+}
+
+.overflow-hidden:hover {
+
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateZ(0);
+
+    }
+
+    100% {
+        transform: translate3d(0, -50%, 0);
+    }
+}

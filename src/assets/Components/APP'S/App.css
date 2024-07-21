@@ -1,0 +1,10 @@
+.back:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background: url("../../Images/bg_img2.svg") no-repeat scroll 0 0;
+    width: 20.45%;
+    height: 43%;
+    background-size: 100% 100%;
+}

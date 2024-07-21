@@ -1,0 +1,52 @@
+.AppRivyobg_Image::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 0;
+    background: url("../../Images/app_left.png") no-repeat scroll 0 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+}
+
+.AppRivyobg_Image::after {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    background: url("../../Images/app_right.png") no-repeat scroll 0 0;
+    width: 903px;
+    height: 580px;
+    z-index: -1;
+    right: 0;
+    background-position: right;
+}
+
+.AppRivyobg_Image .slick-dots button:before {
+
+    display: none;
+
+
+}
+
+.AppRivyobg_Image .slick-active button:before {
+
+    display: none;
+
+
+}
+
+.AppRivyobg_Image .slick-dots button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #084f1733;
+
+
+}
+
+.AppRivyobg_Image .slick-active button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #084f17;
+}

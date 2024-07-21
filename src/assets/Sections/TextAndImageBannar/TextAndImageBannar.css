@@ -1,0 +1,19 @@
+.bg_color {
+    background: linear-gradient(180deg, rgba(22, 29, 37, 1), rgba(0, 0, 0, 1) 100%) !important;
+}
+
+.backgroundRiyoImage {
+    background: url(../../Images/RivyoShopifyAppbannar.jpg) no-repeat scroll 0 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.ReboltBg_img {
+    background: url(../../Images/ReboltBg_img.jpg) no-repeat scroll 0 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}

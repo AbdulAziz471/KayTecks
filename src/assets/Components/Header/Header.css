@@ -1,0 +1,25 @@
+.header {
+    background: #fff !important;
+    box-shadow: 0 0 2px 2px #2f2e2e33;
+    -webkit-box-shadow: 0 0 2px 2px rgb(47 46 46 / 20%);
+    -moz-box-shadow: 0 0 2px 2px rgb(47 46 46 / 20%);
+    -o-box-shadow: 0 0 2px 2px rgb(47 46 46 / 20%);
+    -ms-box-shadow: 0 0 2px 2px rgb(47 46 46 / 20%);
+    position: sticky;
+    left: 0;
+    right: 0;
+    position: -webkit-fixed;
+    animation: slideDown .35s ease-out;
+    z-index: 9999;
+}
+
+@keyframes slidedown {
+
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

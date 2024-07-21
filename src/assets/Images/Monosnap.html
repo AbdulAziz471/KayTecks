@@ -1,0 +1,207 @@
+
+<!-- saved from url=(0085)chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Monosnap</title>
+    
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/libs/imgAreaSelect/css/imgareaselect.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/libs/colorpicker/css/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/css/generic.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/css/commons/top_export_panel.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/css/commons/buttons.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/css/editor/editor.css">
+
+    <script type="text/javascript" src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/libs/ejs/ejs.js"></script>
+    <script type="text/javascript" src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/scripts/js/editor.min.js"></script>
+  </head>
+  <body class="dark_scrollbar">
+    <div class="ms_panel_wrapper" id="top_panel">
+      <div class="ms_panel_content">
+        <div class="ms_flex ms_flex_vert_center panel_left_section" id="history_edit_toolbar">
+          <div class="button button_first tool" id="edit_zoom_scale">
+            <span class="button_text">88%</span>
+          </div>
+          <div class="button tool" data-i18n="tooltip:editor_zoom_out" id="edit_zoom_out" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_zoom_out.png" class="button_icon">
+          </div>
+          <div class="button button_last tool" data-i18n="tooltip:editor_zoom_in" id="edit_zoom_in" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_zoom_in.png" class="button_icon">
+          </div>
+
+          <div class="ms_panel_separator"></div>
+          <div class="button button_first tool" data-i18n="tooltip:editor_undo" id="edit_history_undo" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_undo.png" class="button_icon">
+          </div>
+          <div class="button tool" data-i18n="tooltip:editor_redo" id="edit_history_redo" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_redo.png" class="button_icon">
+          </div>
+          <div class="button button_last tool" data-i18n="tooltip:editor_wipe_history" id="edit_history_wipe" data-original-title="">
+            <span class="button_text" data-i18n="editor_wipe_history">Reset changes</span>
+          </div>
+        </div>
+        <div id="file_header">
+          <div class="ms_table">
+            <div class="ms_td">
+              <input type="text" id="file_title_input" data-i18n="placeholder:editor_screenshot_title_placeholder" placeholder="File name">
+            </div>
+            <div class="ms_td">
+              <div class="dropdown" id="file_type_dropdown">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#">.png</a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="max-width: 100px">
+                  <li><a tabindex="-1" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#" class="ms_file_format" data-type="png">png</a></li>
+                  <li><a tabindex="-1" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#" class="ms_file_format" data-type="jpeg">jpg</a></li>
+                  <li>
+                    <a tabindex="-1" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#" class="ms_file_format" data-type="webp">webp</a>
+                  </li>
+                  <li><a tabindex="-1" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#" class="ms_file_format" data-type="">auto</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="privateBucketContainer ms_hidden" id="private_bucket_container">
+          <label class="privateBucketLabel"><input type="checkbox" class="privateLabelCheckbox" id="private_bucket_checkbox">Permanent Link</label>
+        </div>
+        <div class="ms_flex ms_flex_vert_center" id="file_export_toolbar">
+          <div class="button button_only top_panel_button" id="copy_to_clipboard_button">
+            <span class="button_text" data-i18n="clipboard_button">Copy to clipboard</span>
+          </div>
+          <div class="button button_only top_panel_button" id="file_save_button">
+            <span class="button_text" data-i18n="button_save">Save</span>
+          </div>
+          <div class="btn-group ms_flex" style="position: relative">
+            <div class="button blue button_first" id="file_upload_button">
+              <span class="button_text" data-i18n="button_upload">Upload</span>
+            </div>
+            <div class="button blue button_last" data-toggle="dropdown" id="file_upload_menu">
+              <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_upload_hamburger.png" class="button_icon">
+            </div>
+            <ul class="dropdown-menu pull-right default_scrollbar" role="menu" aria-labelledby="dropdownMenu">
+              <li class="dropdown-submenu pull-left upload_to" data-service="monosnap">
+                <a tabindex="-1" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#" class="with_icon">Monosnap</a>
+                <ul class="dropdown-menu default_scrollbar ms_hidden" id="ms_user_folders_list">
+                  <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/loader_fb_dark.gif" class="service_loader">
+                </ul>
+              </li>
+              <li class="dropdown-submenu pull-left upload_to" data-service="amazon_s3">
+                <a tabindex="-1" href="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA#" class="with_icon">Amazon S3</a>
+                <ul class="dropdown-menu default_scrollbar ms_hidden" id="aws_user_folders_list">
+                  <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/loader_fb_dark.gif" class="service_loader">
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ms_table" id="editor_canvas_wrapper" style="margin-top: 32px; margin-bottom: 36px; width: 1248px; height: 563px;">
+      <div class="ms_td" style="vertical-align: middle">
+        <div id="image_edit_area" style="width: 840px; height: 563px;">
+          <span id="loading" style="display: none;">Loading</span>
+          <img id="image_resize_preview" src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/editor.html?session_id=B3eSjkgIeA">
+          <canvas id="canvas1" width="840" height="563" style="display: block;"></canvas>
+          <canvas id="canvas2" width="840" height="563" style="display: block; cursor: none;"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="ms_flex ms_flex_vert_center ms_flex_horiz_center ms_hidden" id="edit_area_overlay">
+      <div id="image_sizes">
+        <div>
+          <input type="text" id="image_width_input" data-i18n="placeholder:editor_width" placeholder="Width">
+          ⨯
+          <input type="text" id="image_height_input" data-i18n="placeholder:editor_height" placeholder="Height">
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" id="image_keep_proportion" style="margin: 0 0 2px">
+            <label for="image_keep_proportion" data-i18n="editor_keep_proportion" style="margin: 0">Keep proportion</label>
+          </div>
+          <div class="btn btn-small btn-inverse" id="resize_submit_button" data-i18n="button_ok">Ok</div>
+        </div>
+      </div>
+    </div>
+    <div class="ms_panel_wrapper" id="bottom_panel">
+      <div class="ms_panel_content">
+        <div class="ms_flex ms_flex_vert_center" id="tool_settings_toolbar">
+          <div class="button" id="toggle_palette_button">
+            <div class="color_preview" style="background-color: rgb(255, 0, 0);"></div>
+          </div>
+          <div id="tool_settings_popup"><div id="colors_palette"><div class="ms_table"><div class="ms_tr"><div class="ms_td"><div class="button color_selector default_color" data-color="#e70404"><div class="color_preview" style="background:#e70404;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#044fe7"><div class="color_preview" style="background:#044fe7;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#ff7300"><div class="color_preview" style="background:#ff7300;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#000000"><div class="color_preview" style="background:#000000;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#ffffff"><div class="color_preview" style="background:#ffffff;"></div></div></div></div><div class="ms_tr"><div class="ms_td"><div class="button color_selector default_color" data-color="#e704c5"><div class="color_preview" style="background:#e704c5;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#53e704"><div class="color_preview" style="background:#53e704;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#ffea00"><div class="color_preview" style="background:#ffea00;"></div></div></div><div class="ms_td"><div class="button color_selector default_color" data-color="#8a8a8a"><div class="color_preview" style="background:#8a8a8a;"></div></div></div><div class="ms_td"><div class="button color_selector custom_color"><img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_colorpicker.png" class="button_icon"></div></div></div></div></div><div id="extra_settings"><div><input type="checkbox" checked="checked" id="tool_shadow_checkbox"><label for="tool_shadow_checkbox" data-i18n="editor_tool_settings_shadow">Draw shadow</label></div><div><input type="checkbox" checked="checked" id="tool_outline_checkbox"><label for="tool_outline_checkbox" data-i18n="editor_tool_settings_outline">Text outline</label></div></div></div>
+          <div id="tool_color_picker"><div class="colorpicker" id="collorpicker_280" style="display: block; position: relative;"><div class="colorpicker_color" style="background-color: rgb(255, 0, 0);"><div><div style="left: 150px; top: 0px;"></div></div></div><div class="colorpicker_hue"><div style="top: 150px;"></div></div><div class="colorpicker_new_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_current_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6"></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_submit"></div></div></div>
+
+          <div class="ms_panel_separator"></div>
+          <div class="set_default_tool_size min" data-size="4"></div>
+          <div id="tool_size_selector">
+            <div class="slider_handle" style="left: 43px;">
+              <div></div>
+            </div>
+          </div>
+          <div class="set_default_tool_size max" data-size="14"></div>
+        </div>
+        <div class="ms_panel_separator"></div>
+        <div class="ms_panel_separator"></div>
+        <div class="ms_flex ms_flex_vert_center" id="tool_selector_toolbar">
+          <div class="button button_first tool" data-action="arrow" data-i18n="tooltip:editor_tool_arrow" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_arrow.png" class="button_icon">
+          </div>
+          <div class="button tool" data-action="rectangle" data-i18n="tooltip:editor_tool_rectangle" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_rectangle.png" class="button_icon">
+          </div>
+          <div class="button tool" data-action="line" data-i18n="tooltip:editor_tool_line" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_line.png" class="button_icon">
+          </div>
+          <div class="button tool" data-action="ellipse" data-i18n="tooltip:editor_tool_ellipse" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_ellipse.png" class="button_icon">
+          </div>
+          <div class="button button_last tool active" data-action="brush" data-i18n="tooltip:editor_tool_brush" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_pencil.png" class="button_icon">
+          </div>
+
+          <div class="ms_panel_separator"></div>
+          <div class="button button_first tool" data-action="text" data-i18n="tooltip:editor_tool_text" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_text.png" class="button_icon">
+          </div>
+          <div class="button button_last tool" data-action="bubble" data-i18n="tooltip:editor_tool_bubble" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_bubble.png" class="button_icon">
+          </div>
+          <!--<div class="button tool" data-action="bubble" data-i18n="tooltip:editor_tool_bubble">-->
+          <!--<img src="/images/editor/button_tool_bubble.png" class="button_icon">-->
+          <!--</div>-->
+          <!--<div class="button button_last tool" data-action="counter" data-i18n="tooltip:editor_tool_counter">-->
+          <!--<img src="/images/editor/button_tool_bubble.png" class="button_icon">-->
+          <!--</div>-->
+
+          <div class="ms_panel_separator"></div>
+          <div class="button button_first tool" data-action="blur" data-i18n="tooltip:editor_tool_blur" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_blur.png" class="button_icon">
+          </div>
+          <div class="button tool" data-action="crop" data-i18n="tooltip:editor_tool_crop" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_crop.png" class="button_icon">
+          </div>
+          <div class="button button_last tool" data-action="resize" data-i18n="tooltip:editor_tool_resize" data-original-title="">
+            <img src="chrome-extension://lhgadannddhdpkfhfjjgcpdjhpmjhkfm/images/editor/button_tool_resize.png" class="button_icon">
+          </div>
+        </div>
+        <div class="ms_flex ms_flex_vert_center ms_hidden" id="crop_area_toolbar">
+          <div class="button button_only blue" id="crop_submit_button">
+            <span class="button_text" data-i18n="button_ok">Ok</span>
+          </div>
+          <div class="button button_only" id="crop_cancel_button">
+            <span class="button_text" data-i18n="button_cancel">Cancel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <textarea id="text_tool_input"></textarea>
+
+    <div class="alert alert-block hide fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <h4 class="alert-header"></h4>
+      <span class="alert-text"></span>
+    </div>
+  
+
+<div class="tooltip fade top in" style="top: 565px; left: 484.234px; display: block;"><div class="tooltip-arrow"></div><div class="tooltip-inner"><b>Resize</b></div></div></body></html>

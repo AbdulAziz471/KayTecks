@@ -1,0 +1,9 @@
+.panel-collapse {
+    max-height: 500px;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.panel-close {
+    max-height: 0;
+}

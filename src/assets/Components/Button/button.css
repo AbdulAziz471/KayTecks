@@ -1,0 +1,33 @@
+.btton-normal:after {
+    content: "";
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 30px;
+    z-index: -1;
+    max-height: 5rem;
+    transition: 0.5s;
+}
+
+.btton-normal {
+
+    border: 1px solid #000;
+    border-radius: 30px;
+    position: relative;
+    color: #fff;
+    background: transparent;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.btton-normal:hover {
+    color: #000;
+}
+
+.btton-normal:hover:after {
+    max-height: 0rem;
+}

@@ -1,0 +1,27 @@
+    .listimg:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 46px;
+        height: 46px;
+        top: 50%;
+        background: url("../../Images/chekmark-shopify-plus.svg"), no-repeat;
+        transform: translateY(-50%);
+    }
+
+    @media (max-width: 735px) {
+        .listimg:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            background: url("../../Images/chekmark-shopify-plus.svg"), no-repeat;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-size: 100% 100%;
+            display: block;
+        }
+    }

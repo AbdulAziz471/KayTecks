@@ -1,0 +1,62 @@
+@media screen and (min-width: 786px) {
+    .portfolio .slick-slider {
+        padding: 0 35px;
+    }
+}
+
+.portfolio .slick-slider {
+    padding: 0 70px;
+
+
+}
+
+.portfolio .slick-slider .slick-slide>div {
+    margin-right: 15px;
+}
+
+.slick-arrow::before {
+    display: none;
+}
+
+.portfolio .slick-slider .slick-slide>div {
+    padding: 20px;
+    margin: 0px;
+}
+
+.portfolio .slick-slider .slick-prev {
+
+    background: #e9fdd1 url("../../Images/right.svg") no-repeat scroll center;
+    left: 0;
+}
+
+.portfolio .slick-slider .slick-next {
+
+    background: #e9fdd1 url("../../Images/left.svg") no-repeat scroll center;
+    right: 0;
+}
+
+
+.portfolio .slick-slider .slick-prev {
+    border-radius: 15px 0 0 15px;
+    width: 90px;
+    height: 90px;
+    z-index: 0;
+}
+
+.portfolio .slick-slider .slick-next {
+    border-radius: 0px 15px 15px 0px;
+    width: 90px;
+    height: 90px;
+    z-index: 0;
+}
+
+.portfolio .slick-slider .slick-list {
+    z-index: 1;
+}
+
+.portfolio .slick-slider .slick-arrow {
+    width: 90px;
+    height: 90px;
+    top: auto;
+    bottom: 65px;
+}

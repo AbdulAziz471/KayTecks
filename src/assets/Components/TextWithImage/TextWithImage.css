@@ -1,0 +1,26 @@
+.content h4:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 8px;
+    background: #070707;
+    border-radius: 50%;
+}
+
+.list::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../Images/check-mark.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    left: -18px;
+    bottom: 8px;
+}
+
+/* .img_sec {
+
+    flex-direction: row-reverse;
+} */

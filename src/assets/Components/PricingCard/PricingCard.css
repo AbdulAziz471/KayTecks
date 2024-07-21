@@ -1,0 +1,82 @@
+.price:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    opacity: .20000000298023224;
+    background: #000;
+    width: 240px;
+    height: 1px;
+}
+
+.pricebutton a {
+    border-radius: 154px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    column-gap: 1.25rem;
+    padding: 15px 20px;
+    color: #0000007f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0;
+    letter-spacing: -.3px;
+    white-space: pre;
+    max-width: 240px;
+    width: 100%;
+}
+
+
+.colorChange:hover .colorChange {
+    color: black !important;
+}
+
+.colorChange:hover .pricebutton a {
+    border: 1px solid rgba(0, 0, 0, .2);
+    background: black;
+    color: white;
+
+}
+
+.colorChange:hover li svg path {
+    fill: white;
+    stroke: white;
+}
+
+.colorChange:hover li svg circle {
+    fill: #008060;
+}
+
+.colorChange:hover .pricebutton svg path {
+    fill: white;
+    stroke: white;
+}
+
+.colorChange:hover .pricebutton svg path {
+    fill: white;
+    stroke: white;
+}
+
+
+.monthlyplan .monthlyplanprice {
+    display: none;
+}
+
+.yearlyplan .yearlyplanprice {
+    display: none;
+}
+
+.actives {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeIn .5s ease 1 forwards;
+    text-align: left;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

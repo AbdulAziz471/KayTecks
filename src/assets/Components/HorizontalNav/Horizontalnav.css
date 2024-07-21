@@ -1,0 +1,15 @@
+.nav-items {
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+
+.nav-open {
+    max-height: 100%;
+    transition: max-height 0.3s ease-in;
+}
+
+.nav-closed {
+    max-height: 0;
+}
+
+/* Other styles... */
