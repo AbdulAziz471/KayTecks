@@ -42,41 +42,54 @@ export default function Header() {
   //   },
   //   { name: "Blog", link: "/pages/blog" },
   // ];
-  const navigationData = [
-    { 
-      name: "Launchpad", // A dynamic take on 'Home'
-      link: "#" 
-    },
-    {
-      name: "Tech Solutions",
-      link: "javascript:void(0)",
-      dropdown: [
-        { name: "Web Architecting", link: "/web-architecting" },
-        { name: "App Innovation", link: "/app-innovation" },
-        { name: "Organic Search Mastery", link: "/search-mastery" },
-        { name: "Digital Outreach", link: "/digital-outreach" },
-        { name: "Creative Engineering", link: "/creative-engineering" },
-        { name: "Cloud Solutions", link: "/cloud-solutions" },
-        { name: "AI Integrations", link: "/ai-integrations" },
-      ],
-    },
-    {
-      name: "Discover K-tech", // More inviting and comprehensive than just 'About'
-      link: "javascript:void(0)",
-      dropdown: [
-        { name: "Our Story", link: "/pages/about" },
-        { name: "Meet the Innovators", link: "/pages/our_team" }, // More engaging title
-        { name: "K-tech Life", link: "/pages/life_at_ktech" }, // Streamlined and branded
-        { name: "Showcase", link: "/pages/our_work" }, // More direct and appealing
-        { name: "Join Us", link: "/pages/careers" }, // Action-oriented
-      ],
-    },
-    {
-      name: "Value Blueprint", // Unique name for Pricing Plan
-      link: "/pricing" // Changed to a more typical link structure
-    },
-  ];
-  
+    const navigationData = [
+      { 
+        name: "Home", // A dynamic take on 'Home'
+        link: "/" 
+      },
+     
+      { 
+        name: "Projects ", // A dynamic take on 'Home'
+        link: "/pages/project" 
+      },
+      { 
+        name: "About Us ", // A dynamic take on 'Home'
+        link: "/pages/about" 
+      },
+      { 
+        name: "Services", // A dynamic take on 'Home'
+        link: "/" 
+      },
+      // {
+      //   name: "Our Services",
+      //   link: "javascript:void(0)",
+      //   dropdown: [
+      //     { name: "Web Architecting", link: "/web-architecting" },
+      //     { name: "App Innovation", link: "/app-innovation" },
+      //     { name: "Organic Search Mastery", link: "/search-mastery" },
+      //     { name: "Digital Outreach", link: "/digital-outreach" },
+      //     { name: "Creative Engineering", link: "/creative-engineering" },
+      //     { name: "Cloud Solutions", link: "/cloud-solutions" },
+      //     { name: "AI Integrations", link: "/ai-integrations" },
+      //   ],
+      // },
+      // {
+      //   name: "Discover K-tech", // More inviting and comprehensive than just 'About'
+      //   link: "javascript:void(0)",
+      //   dropdown: [
+      //     { name: "K-tech Life", link: "/pages/life_at_ktech" }, // Streamlined and branded
+      //     { name: "Our Story", link: "/pages/about" },
+      //     { name: "Meet the Innovators", link: "/pages/our_team" }, // More engaging title
+      //     { name: "Showcase", link: "/pages/our_work" }, // More direct and appealing
+      //     { name: "Join Us", link: "/pages/careers" }, // Action-oriented
+      //   ],
+      // },
+      // {
+      //   name: "Value Blueprint", // Unique name for Pricing Plan
+      //   link: "/pricing" // Changed to a more typical link structure
+      // },
+    ];
+    
   
   return (
     <>

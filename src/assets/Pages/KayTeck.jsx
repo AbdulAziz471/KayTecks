@@ -22,15 +22,16 @@ import TextCard from "../Components/TextCard/TextCard";
 import { useEffect, useState } from "react";
 import Recomend from "../Images/Recomend.svg";
 export default function KayTeck() {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isYear, setIsYear] = useState("Monthly Plan");
+
   const textArray = [
     "Wegsite Designing",
     "App Developement ",
     "Indeustru Experience",
     "E-com Development",
   ];
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isYear, setIsYear] = useState("Monthly Plan");
-
+ 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textArray.length);
@@ -135,6 +136,7 @@ const pricingPlans = [
         content_1="For over a decade, K-tech has been at the forefront of IT excellence,"
         content_2="empowering businesses with cutting-edge web and software development services."
          linkText="Discover Our Services"
+         showTypewriter={true}
         img={CapabilitiesBannar}
       />
        <TextCard TextCards={Card} />
@@ -146,12 +148,12 @@ const pricingPlans = [
       <BenefitsOfHiring />
       <IncorporatedSecurityMeasures />
       <TextWithButton
-  btnText="Let's Talk"
-  mainDiv="!items-center"
-  heading="Our IT solutions provide unparalleled scalability and extensive customization options."
-  headingClass="text-center max-w-[1070px] !mb-[50px]"
-/>  
-<Pricingplan
+      btnText="Let's Talk"
+      mainDiv="!items-center"
+      heading="Our IT solutions provide unparalleled scalability and extensive customization options."
+      headingClass="text-center max-w-[1070px] !mb-[50px]"
+      />  
+        <Pricingplan
         pricingPlans={pricingPlans}
         handleYearlyClick={handleYearlyClick}
         handleMonthlyClick={handleMonthlyClick}
@@ -162,7 +164,7 @@ const pricingPlans = [
       {/* <ShopifyApp /> */}
       {/* <Portfolio Protfolio_title="Our Portfolio" /> */}
       {/* <CompanyCapaboilities /> */}
-      {/* <Testimonial /> */}
+      { <Testimonial /> }
       {/* <AssociatedApps /> */}
       <ContactSection /> 
     </>

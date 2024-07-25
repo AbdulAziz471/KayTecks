@@ -33,20 +33,22 @@ export default function TextAndImageBannar(props) {
           <div
             className={`w-[90%] Custom_padding font-semibold  lg:w-1/2 pt-[50px] text-center lg:text-left lg:pt-[16px] ${props.textbannar}  `}
           >
-              <span className="bg-black inline-flex rounded-full uppercase font-bold mb-2 py-2   leading-4  text-xs gap-x-1 text-white ">
-                  <strong className="text-[#d5ed42] font-medium">
-                    11 year of
-                  </strong>
-                  <span className="gap-[20px]">
-                    <Typewriter
-                      options={{
-                        strings: [textArray[currentTextIndex]],
-                        autoStart: true,
-                        loop: false,
-                      }}
-                    />
-                  </span>
+             {props.showTypewriter && (
+              <span className="bg-black inline-flex rounded-full uppercase font-bold mb-2 py-2 leading-4 text-xs gap-x-1 text-white">
+                <strong className="text-[#d5ed42] font-medium">
+                  11 years of
+                </strong>
+                <span className="gap-[20px]">
+                  <Typewriter
+                    options={{
+                      strings: [textArray[currentTextIndex]],
+                      autoStart: true,
+                      loop: false,
+                    }}
+                  />
                 </span>
+              </span>
+            )}
             {props.buildText && <ShopifyBuild buildText={props.buildText} />}
             {props.TopLinkText && (
               <div

@@ -17,6 +17,8 @@ import AddUpCheckOut from "./assets/Pages/AddUpCheckOut";
 import WishListClub from "./assets/Pages/WishListClub";
 import EnginesDiscountBox from "./assets/Pages/EnginesDiscountBox";
 import KayTeck from "./assets/Pages/KayTeck";
+import AboutKayTeck from "./assets/Pages/AboutKayTeck";
+import ProjectKAyTeck from "./assets/Pages/ProjectKAyTeck";
 function App() {
   return (
     <>
@@ -27,7 +29,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<KayTeck />} />
           <Route path="/pages/capabilities" element={<Capabilities />} />
-          <Route path="/pages/about" element={<About />} />
+          <Route path="/pages/about" element={<AboutKayTeck/>} />
+          <Route path="/pages/project" element={<ProjectKAyTeck/>} />
           <Route path="/pages/Blog" element={<Blog />} />
           <Route path="/pages/ShopifyApp" element={<SeeAll />} />
           <Route path="/Shopify-Plus" element={<ShopifyPlus />} />
