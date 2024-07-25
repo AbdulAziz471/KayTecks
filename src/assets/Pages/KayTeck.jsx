@@ -159,13 +159,13 @@ const pricingPlans = [
         handleMonthlyClick={handleMonthlyClick}
         isYear={isYear}
       />
-      {/* <Services title="Our Services" /> */}
-      {/* <ShopifyPlus /> */}
-      {/* <ShopifyApp /> */}
-      {/* <Portfolio Protfolio_title="Our Portfolio" /> */}
-      {/* <CompanyCapaboilities /> */}
+      <Services title="Our Services" />
+      <ShopifyPlus />
+      <ShopifyApp />
+      <Portfolio Protfolio_title="Our Portfolio" />
+      <CompanyCapaboilities />
       { <Testimonial /> }
-      {/* <AssociatedApps /> */}
+      <AssociatedApps />
      
     </>
   );
