@@ -166,7 +166,7 @@ const pricingPlans = [
       {/* <CompanyCapaboilities /> */}
       { <Testimonial /> }
       {/* <AssociatedApps /> */}
-      <ContactSection /> 
+     
     </>
   );
 }

@@ -29,6 +29,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<KayTeck />} />
           <Route path="/pages/capabilities" element={<Capabilities />} />
+          <Route path="/pages/ContactPage" element={<ConatactPage />} />
           <Route path="/pages/about" element={<AboutKayTeck/>} />
           <Route path="/pages/project" element={<ProjectKAyTeck/>} />
           <Route path="/pages/Blog" element={<Blog />} />

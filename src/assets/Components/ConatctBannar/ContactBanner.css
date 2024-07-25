@@ -1,6 +1,6 @@
 .ContactPage {
     padding: 108px 0 118px;
-    margin: 0 150px;
+    /* margin: 0 150px; */
     background-color: black;
     position: relative;
 }
@@ -15,8 +15,6 @@
     height: 250px;
 
 }
-
-
 .slick-slide>div {
     margin-right: 15px;
 }

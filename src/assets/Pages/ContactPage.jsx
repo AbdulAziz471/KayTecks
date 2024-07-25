@@ -5,6 +5,7 @@ export default function ConatactPage() {
     <div>
       <ContactBannar />
       <C_Form className="contact_page" />
+    
     </div>
   );
 }
