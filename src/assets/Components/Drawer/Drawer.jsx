@@ -5,33 +5,53 @@ import back from "../../Images/drawback.svg";
 import "./Drawer.css";
 const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
   const navigationData = [
-    { name: "Capabilities", link: "/pages/capabilities" },
-    { name: "Shopify Plus", link: "/shopify-plus" },
-    {
-      name: "Shopify Apps",
-      dropdown: [
-        { name: "Shopify Apps", link: "/pages/ShopifyApp" },
-        { name: "Rivyo Product Reviews & QA", link: "/pages/rivyo_review" },
-        { name: "Native Subscriptions", link: "/pages/Native_Subscription" },
-        { name: "Wishlist Club", link: "/pages/WishListClub" },
-        { name: "AddUp Checkout", link: "/pages/add_up_checkout" },
-        { name: "Engines ‑ Discount Box", link: "/pages/engines_discount_box" },
-        { name: "See All", link: "/pages/ShopifyApp" },
-      ],
+    { 
+      name: "Home", // A dynamic take on 'Home'
+      link: "/" 
     },
-    {
-      name: "About",
-      dropdown: [
-        { name: "About Us", link: "/pages/about" },
-        { name: "Our Team", link: "/pages/our_team" },
-        { name: "Life At Contrive", link: "/pages/life_at_webcontrive" },
-        { name: "Our Works", link: "/pages/our_work" },
-        { name: "Careers", link: "/pages/careers" },
-      ],
+   
+    { 
+      name: "Projects ", // A dynamic take on 'Home'
+      link: "/pages/project" 
     },
-    { name: "Blog", link: "/pages/blog" },
+    { 
+      name: "About Us ", // A dynamic take on 'Home'
+      link: "/pages/about" 
+    },
+    { 
+      name: "Services", // A dynamic take on 'Home'
+      link: "/" 
+    },
+    // {
+    //   name: "Our Services",
+    //   link: "javascript:void(0)",
+    //   dropdown: [
+    //     { name: "Web Architecting", link: "/web-architecting" },
+    //     { name: "App Innovation", link: "/app-innovation" },
+    //     { name: "Organic Search Mastery", link: "/search-mastery" },
+    //     { name: "Digital Outreach", link: "/digital-outreach" },
+    //     { name: "Creative Engineering", link: "/creative-engineering" },
+    //     { name: "Cloud Solutions", link: "/cloud-solutions" },
+    //     { name: "AI Integrations", link: "/ai-integrations" },
+    //   ],
+    // },
+    // {
+    //   name: "Discover K-tech", // More inviting and comprehensive than just 'About'
+    //   link: "javascript:void(0)",
+    //   dropdown: [
+    //     { name: "K-tech Life", link: "/pages/life_at_ktech" }, // Streamlined and branded
+    //     { name: "Our Story", link: "/pages/about" },
+    //     { name: "Meet the Innovators", link: "/pages/our_team" }, // More engaging title
+    //     { name: "Showcase", link: "/pages/our_work" }, // More direct and appealing
+    //     { name: "Join Us", link: "/pages/careers" }, // Action-oriented
+    //   ],
+    // },
+    // {
+    //   name: "Value Blueprint", // Unique name for Pricing Plan
+    //   link: "/pricing" // Changed to a more typical link structure
+    // },
   ];
-
+  
   const renderItem = (item, index) => {
     const [isActive, setIsActive] = useState(false);
 
