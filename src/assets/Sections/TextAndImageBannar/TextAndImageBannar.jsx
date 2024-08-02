@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import "./TextAndImageBannar.css";
 import GreenArrow from "../../Images/GreenArrow.svg";
 import Button from "../../Components/Button/Buton";
 import AppsCard from "../../Components/AppsCard/AppsCard";
 import ShopifyBuild from "../../Components/ShopifyBuildSmall/ShopifyBuild";
 export default function TextAndImageBannar(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      mirror: true,
+    });
+  }, []);
   const textArray = [
     "Wegsite Designing",
     "App Developement ",
@@ -23,9 +32,7 @@ export default function TextAndImageBannar(props) {
   }, []);
   return (
     <>
-      <div
-        className={`bg-black  pt-[100px] pb-[60px] ${props.background_color}`}
-      >
+  <div className={`bg-black pt-[100px] pb-[60px] ${props.background_color}`} >
         <div
           className={`flex flex-col-reverse  justify-center  lg:flex-row max-w-[1620px] w-full mx-auto px-[15px]  ${props.main_class}`}
         >
@@ -74,7 +81,7 @@ export default function TextAndImageBannar(props) {
               </div>
             )}
             <h1
-              className={`tracking-[-.04em] mb-[20px] w-full  font-semibold text-[30px] lg:text-[54px] leading-[42px] lg:leading-[62px] text-white ${props.heading_class} `}
+              className={`tracking-[-.04em] mb-[20px] w-full  font-semibold text-[30px] lg:text-[54px] leading-[42px] lg:leading-[62px] text-white ${props.heading_class} `} data-aos="fade-up"
             >
               {props.Bannartilte}
             </h1>
@@ -87,7 +94,7 @@ export default function TextAndImageBannar(props) {
             </p>
             <div>
               {props.linkText && (
-                <a className="flex gap-[1.25em] text-[#a5e359] hover:gap-[2.25em] font-bold text-[18px] leading-[25px] tracking-[-.02em] transition-all duration-300 ease-in-out lg:justify-start justify-center">
+                <a className="flex gap-[1.25em] text-[#a5e359] hover:gap-[2.25em] font-bold text-[18px] leading-[25px] tracking-[-.02em] transition-all duration-300 ease-in-out lg:justify-start justify-center"  data-aos="fade-down">
                   {props.linkText}
                   <img src={GreenArrow} alt="vsdfsdf" />
                 </a>
@@ -115,8 +122,8 @@ export default function TextAndImageBannar(props) {
               </div>
             )}
           </div>
-          <div className={`w-[90%] lg:w-1/2 lg:pl-[50px] ${props.ImgBannar} `}>
-            <img className="w-full" src={props.img} alt="" />
+          <div className={`w-[90%] lg:w-1/2 lg:pl-[50px] ${props.ImgBannar} `} data-aos="zoom-in">
+            <img className="w-full" src={props.img} alt=" " />
           </div>
         </div>
       </div>

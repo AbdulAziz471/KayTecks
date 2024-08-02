@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from "react";
 import TextComponent from "../../Components/TextComponent/TextComponent";
 import {
   SerSvg1,
@@ -10,6 +13,16 @@ import {
 
 import "./ShopifyPlusService.css";
 const ShopifyPlusServices = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,  // Animation duration
+      once: false,     // Ensure animations are not limited to just once
+      mirror: true,    // Animations happen when scrolling up and down
+    });
+    // This ensures AOS re-initializes on dependency changes
+    return () => AOS.refresh();
+}, []);
+
   const servicesData = [
     {
       index: 1,
@@ -72,7 +85,7 @@ const ShopifyPlusServices = () => {
               <div
                 key={index}
                 className=" relative px-[20px] sm:px-[10px] md:px-[20px]  lg:px-[40px] py-[40px] rounded transition-all duration-300 hover:shadow-2xl changeColorSvg  "
-              >
+                data-aos="zoom-out-up">
                 <div>
                   <serCard.SvgComponent />
                 </div>

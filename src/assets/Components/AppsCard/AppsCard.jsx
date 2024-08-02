@@ -2,6 +2,7 @@ import React from "react";
 import rivyo from "../../Images/rivyo.svg";
 import dwonload from "../../Images/Dwonload.svg";
 export default function AppsCard(props) {
+  
   return (
     <>
       <div className={`shadow-lg ${props.mainCardClass}`}>

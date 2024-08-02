@@ -1,3 +1,5 @@
+ 
+import { useEffect, useState } from "react";
 import HomeBannar from "../Components/HomeBannar/HomeBannar";
 import ImagesSlider from "../Components/ImagesSlider/ImagesSlider";
 import CompanyCapaboilities from "../Sections/CompanyCapabilities/CompanyCapaboilities";
@@ -19,12 +21,11 @@ import TextWithButton from "../Components/TextWithButton/TextWithButton";
 import TextAndImageBannar from "../Sections/TextAndImageBannar/TextAndImageBannar";
 import CapabilitiesBannar from "../Images/CapabilitiesBannar.svg";
 import TextCard from "../Components/TextCard/TextCard";
-import { useEffect, useState } from "react";
 import Recomend from "../Images/Recomend.svg";
 export default function KayTeck() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isYear, setIsYear] = useState("Monthly Plan");
-
+ 
   const textArray = [
     "Wegsite Designing",
     "App Developement ",
@@ -146,25 +147,25 @@ const pricingPlans = [
       <BusinessNeeds /> 
       <DefineShopifyPlus/>
       <BenefitsOfHiring />
-      <IncorporatedSecurityMeasures />
+      {/* <IncorporatedSecurityMeasures /> */}
       <TextWithButton
       btnText="Let's Talk"
       mainDiv="!items-center"
       heading="Our IT solutions provide unparalleled scalability and extensive customization options."
       headingClass="text-center max-w-[1070px] !mb-[50px]"
       />  
-        <Pricingplan
+        {/* <Pricingplan
         pricingPlans={pricingPlans}
         handleYearlyClick={handleYearlyClick}
         handleMonthlyClick={handleMonthlyClick}
         isYear={isYear}
-      />
-      <Services title="Our Services" />
+      /> */}
+      {/* <Services title="Our Services" /> */}
       <ShopifyPlus />
-      <ShopifyApp />
-      <Portfolio Protfolio_title="Our Portfolio" />
+      {/* <ShopifyApp /> */}
+      {/* <Portfolio Protfolio_title="Our Portfolio" /> */}
       <CompanyCapaboilities />
-      { <Testimonial /> }
+      {/* { <Testimonial /> } */}
       <AssociatedApps />
      
     </>
