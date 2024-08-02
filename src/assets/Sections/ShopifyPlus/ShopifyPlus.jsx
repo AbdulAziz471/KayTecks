@@ -12,9 +12,9 @@ export default function ShopifyPlus() {
         <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row lg:flex-row justify-center  items-center py-[50px]">
           <div className="lg:w-1/2 md:w-1/2  lg:pl-5 ">
             <TextWithButton
-              heading="Maximize the growth of your online store through our specialized Shopify Plus services."
+           heading="Accelerate business growth and efficiency with our versatile IT solutions."
               btnText="See Our Services"
-              svg={plus}
+              // svg={plus}
             />
           </div>
           <div className="lg:w-1/2 md:w-1/2">

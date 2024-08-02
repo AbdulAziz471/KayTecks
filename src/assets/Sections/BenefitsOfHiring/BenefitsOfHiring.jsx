@@ -4,29 +4,30 @@ export default function BenefitsOfHiring() {
   const BenefitsList = [
     {
       index: 1,
-      name: "Expertise in Shopify Plus",
+      name: "Comprehensive IT Solutions",
     },
     {
       index: 2,
-      name: "Customized Solutions",
+      name: "Dedicated Professional Team",
     },
     {
       index: 3,
-      name: "Fast and Efficient Development",
+      name: "Rapid and Efficient Development",
     },
     {
       index: 4,
-      name: "Optimized Site for SEO",
+      name: "SEO Optimization",
     },
     {
       index: 5,
-      name: "Scalability and Flexibility",
+      name: "Adaptable and Scalable Solutions",
     },
     {
       index: 6,
-      name: "Security and Protection",
+      name: "Robust Security Measures",
     },
   ];
+  
 
   return (
     <>

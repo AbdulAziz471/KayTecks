@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import kayteckFooter from "../../Images/kayteckFooter.png";
+import kaytechFooterNewlogo from "../../Images/kaytechFooterNewlogo.png";
 import HorizontalNav from "../HorizontalNav/HorizontalNav";
 import IconsList from "../IconsList/IconsList";
 
@@ -56,7 +56,7 @@ export default function Footer() {
                 to="/"
                 class=" flex items-center flex-col max-w-[100px]   "
               >
-                <img class="lg:w-full" src={kayteckFooter} alt="" />
+                <img class="lg:w-full max-w-[300px]" src={kaytechFooterNewlogo} alt="" />
               </NavLink>
               <IconsList />
             </div>
