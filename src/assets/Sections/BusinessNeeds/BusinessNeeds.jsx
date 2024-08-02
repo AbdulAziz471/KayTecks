@@ -1,7 +1,17 @@
+import { useEffect } from "react";
 import TextComponent from "../../Components/TextComponent/TextComponent";
 import BusinessNeed from "../../Images/BusinessNeed.png";
 import "./BusinessNeeds.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 const BusinessNeeds = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1400,
+      once: true,
+      mirror: true,
+    });
+  }, []);
   return (
     <>
       <div className="pt-[120px]">
@@ -23,7 +33,7 @@ const BusinessNeeds = () => {
 
               <div className="max-w-[750px] w-full   ">
                 <div className=" relative   lg:mt-[-190px]">
-                  <img className="" src={BusinessNeed} alt="K-tech Business Solutions Visualization" />
+                  <img className="" src={BusinessNeed} alt="K-tech Business Solutions Visualization"  data-aos="zoom-in-up"/>
                 </div>
               </div>
             </div>
